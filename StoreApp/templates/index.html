@@ -20,13 +20,11 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     
                 <!-- Inicio Produtos -->
-                {% include 'includes/card_produto1.html' %}
-                <!-------->
-                {% include 'includes/card_produto2.html' %}
-                <!-------->
-                {% include 'includes/card_produto1.html' %}
-                <!-------->
-                {% include 'includes/card_produto2.html' %} 
+                {% for produto in produtos %}
+                    {% include 'includes/card_produto.html' %}
+                {% empty %}
+                    Não há produtos em destaque.
+                {% endfor %}
                 <!-- termino produtos-->
             </div>
         </div>
